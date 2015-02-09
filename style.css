@@ -1,0 +1,237 @@
+/*
+Theme Name: Sale Jeune
+Description: Theme for salejeune.com
+Template: Base
+Author: Matthieu Bovel <matthieu@bovel.net>
+Author URI: http://matthieu.bovel.net
+Version: 1
+*/
+
+html, body {
+	overflow-x: hidden;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-size: 1.3em;
+	line-height: 1.8;
+	background: url("bg.jpg") center center no-repeat fixed #000;
+	background-size: auto 100%;
+	text-align: justify;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	margin: 0;
+	padding-bottom: 10em;
+}
+#site_title {
+	font-size: 5em;
+	font-size: 15vw;
+	text-align: center;
+	font-weight: 700;
+	color: #fff;
+	-webkit-transform: rotate(5deg);
+	transform: rotate(5deg);
+	margin: 0;
+	margin-bottom: -0.3em;
+	text-decoration: none;
+}
+#site_title small {
+	font-weight: 500;
+}
+h1 {
+	font-size: 3em;
+	font-size: 5vw;
+	margin: 0.4em 0;
+}
+
+time {
+	display: none;
+}
+
+#char-a {
+	margin-left: 0.01em;
+}
+#char-J {
+	margin-left: 0.03em;
+}
+#char-n {
+	margin-left: -0.01em;
+}
+#char-e2 {
+	margin-left: -0.02em;
+}
+#char-dot {
+	margin-left: 0.02em;
+}
+#char-c {
+	margin-left: -0.03em;
+}
+#char-o {
+	margin-left: 0.02em;
+}
+#char-m {
+	margin-left: -0.01em;
+}
+
+article {
+	max-width: 30em;
+	padding: 2em;
+	margin: 6em auto;
+	color: #000;
+	position: relative;
+	overflow: visible;
+	page-break-before: always;
+}
+
+article::after {
+	content: "";
+	z-index: -2;
+	position: absolute;
+	top: -5%;
+	left: -40%;
+	width: 180%;
+	height: 110%;
+	-webkit-box-sizing: border-box;
+	opacity: .9;
+	border: 1em solid black;
+	background-color: #444;
+}
+.dark {
+	color: rgba(256,256,256,.7);
+	/*
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	*/
+}
+.dark::after {
+	-webkit-transform: rotate(2deg);
+	transform: rotate(2deg);
+	background-color: #1E0808;
+}
+.light {
+	font-weight: 300;
+	color: rgba(0,0,0,.9);
+}
+.light::after {
+	-webkit-transform: rotate(-4deg);
+	transform: rotate(-4deg);
+	background-color: #fdc;
+	border-color: rgba(256,256,256,.8);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	padding-botom: -0.5em;
+	display: inline-block;
+	position: relative;
+}
+p a::after {
+	content: "";
+	display: block;
+	-webkit-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+	position: absolute;
+	top: 95%;
+	left: -1%;
+	width: 102%;
+	height: 0.05em;
+	z-index: -1;
+	background-color: #666;
+	-webkit-transition-duration: .5s;
+	-webkit-transition-property: all;
+	-webkit-transition-delay: 0;
+	-webkit-transition-timing-function: ease;
+}
+.dark p a:hover::after {
+	background-color: rgba(256,256,256,.8);
+	height: 0.10em;
+	-webkit-transform: rotate(1deg);
+	transform: rotate(1deg);
+}
+.light p a:hover::after {
+	background-color: rgba(0,0,0,.9);
+	height: 0.10em;
+	-webkit-transform: rotate(1deg);
+	transform: rotate(1deg);
+}
+
+#site_title::after,
+h1 a::after {
+	content: none;
+}
+
+::selection {
+	background-color: rgba(128,128,128, .6);
+}
+
+::-moz-selection {
+	background-color: rgba(128,128,128, .6);
+}
+
+@media (max-width: 80em) {
+	body {
+		font-size: 1.1em;
+	}
+	#site_title {
+		margin-bottom: -0.3em;
+	}
+	h2 {
+		font-size: 2em;
+	}
+	article {
+		padding: 0 1.5em;
+	}
+	article::after {
+		left: -20%;
+		width: 140%;
+		border-width: 0.5em;
+	}
+}
+
+@media (max-width: 40em) {
+	body {
+		font-size: 1em;
+	}
+	#site_title {
+		font-size: 14vw;
+		margin-top: 0.5em;
+		margin-bottom: -0.5em;
+	}
+	h2 {
+		font-size: 1.6em;
+	}
+	h3 {
+		font-size: 1em;
+	}
+}
+
+@page {
+	margin: 2.5cm;
+}
+
+@media print {
+	body {
+		background: none;
+		font-size: 10pt;
+	}
+	#site_title, h2, .dark {
+		color: #000;
+	}
+	#site_title {
+		font-size: 5em;
+		margin: 3em 0 0 0;
+	}
+	h2 {
+		font-size: 2em;
+	}
+	article, .dark {
+		background: none;
+		border: none;
+	}
+	article::after {
+		content: none;
+	}
+}
