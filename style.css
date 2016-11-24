@@ -7,48 +7,54 @@ Author URI: http://matthieu.bovel.net
 Version: 1
 */
 
-html, body {
+html,
+body {
 	overflow-x: hidden;
 }
 body {
 	font-family: 'Roboto', 'Hevetica', sans-serif;
-	font-weight: 300;
 	font-size: 1.3em;
+	font-weight: 300;
 	line-height: 1.8;
-	text-align: justify;
-	
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
-	
+
 	margin: 0;
-	
+
+	text-align: justify;
+	-webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+	        hyphens: auto;
+
 	background-color: #000;
-	background-image: url("bg.jpg");
-	background-position: center center;
-	background-attachment: fixed;
+	background-image: url('bg.jpg');
 	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
 	background-size: auto 100%;
+
+	    -ms-hyphens: auto;
 }
 .mce-content-body {
-	background-size: cover;
 	margin: 3em auto;
+
+	background-size: cover;
 }
 #page {
 	overflow: hidden;
 }
 #site_title {
+	color: #fff;
 	font-size: 4.5em;
 	font-size: 14.5vw;
-	text-align: center;
-	display: block;
 	font-weight: 700;
-	color: #fff;
-	-webkit-transform: rotate(5deg);
-	transform: rotate(5deg);
+
+	display: block;
+
 	margin: 0;
 	margin-bottom: -0.3em;
+
+	-webkit-transform: rotate(5deg);
+	        transform: rotate(5deg);
+	text-align: center;
 	text-decoration: none;
 }
 #site_title small {
@@ -83,6 +89,7 @@ body {
 }
 h1 {
 	font-size: 3em;
+
 	margin: 1.5em 0 0.6em;
 }
 time {
@@ -90,29 +97,37 @@ time {
 }
 article,
 .mce-content-body {
-	max-width: 30em;
-	padding: 2em;
-	margin: 4em auto;
 	color: #000;
+
 	position: relative;
+
 	overflow: visible;
+
+	max-width: 30em;
+	margin: 4em auto;
+	padding: 2em;
 }
 article::after,
 .mce-content-body::after {
-	content: "";
-	z-index: -2;
 	position: absolute;
+	z-index: -2;
 	top: 0;
 	left: -40%;
+
+	-webkit-box-sizing: border-box;
 	width: 180%;
 	height: 105%;
-	-webkit-box-sizing: border-box;
-	opacity: .9;
+
+	content: '';
+
+	opacity: 0.9;
 	border: 1em solid #000;
 }
 .dark {
 	color: #ccc;
+
 	letter-spacing: 0.04em;
+
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -121,26 +136,29 @@ article::after,
 }
 .dark::after {
 	-webkit-transform: rotate(2deg);
-	transform: rotate(2deg);
+	        transform: rotate(2deg);
+
 	background-color: #250a0a;
 	box-shadow: 0 0 3px #000;
 }
 .light {
-	font-weight: 300;
 	color: #222;
+	font-weight: 300;
 }
 .no-generatedcontent .light {
 	background-color: #fdc;
 }
 .light::after {
-	-webkit-transform: rotate(-4deg);
-	transform: rotate(-4deg);
-	background-color: #fdc;
+	-webkit-transform: rotate(-2deg);
+	        transform: rotate(-2deg);
+
 	border-color: #fff;
+	background-color: #fdc;
 	box-shadow: 0 0 3px #fff;
 }
 a {
 	color: inherit;
+
 	text-decoration: none;
 }
 p a {
@@ -184,17 +202,19 @@ h1 a::after {
 	content: none;
 }
 #copyright {
-	text-align: center;
-	font-size: 0.7em;
 	color: #fff;
-	padding-top: 10em;
+	font-size: 0.7em;
+
 	margin: 2em;
+	padding-top: 10em;
+
+	text-align: center;
 }
 ::-webkit-selection {
-	background-color: rgba(128,128,128, .6);
+	background-color: rgba(128,128,128, 0.6);
 }
 ::-moz-selection {
-	background-color: rgba(128,128,128, .6);
+	background-color: rgba(128,128,128, 0.6);
 }
 
 @media (max-width: 80em) {
@@ -206,7 +226,9 @@ h1 a::after {
 	}
 	article::after {
 		left: -20%;
+
 		width: 140%;
+
 		border-width: 0.5em;
 	}
 }
@@ -218,6 +240,7 @@ h1 a::after {
 	#site_title {
 		font-size: 3.2em;
 		font-size: 13vw;
+
 		margin-top: 0.5em;
 		margin-bottom: -3rem;
 	}
@@ -235,28 +258,34 @@ h1 a::after {
 
 @media print {
 	body {
-		background: none;
 		font-size: 10pt;
+
+		background: none;
 	}
-	#site_title, h1, .dark, #copyright {
+	#site_title,
+	h1,
+	.dark,
+	#copyright {
 		color: #000;
 	}
 	#site_title {
 		font-size: 5em;
+
 		margin-top: 1em;
 		margin-bottom: -1em;
 	}
 	h1 {
 		font-size: 2em;
 	}
-	article, .dark {
-		background: none;
+	article,
+	.dark {
 		border: none;
+		background: none;
 	}
 	article::after {
 		content: none;
 	}
-	p a::after  {
+	p a::after {
 		content: none;
 	}
 	#copyright {
