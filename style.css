@@ -162,40 +162,17 @@ a {
 	text-decoration: none;
 }
 p a {
-	display: inline-block;
-	position: relative;
-	background: none;
-}
-p a::after {
-	content: "";
-	display: block;
-	-webkit-transform: rotate(-2deg);
-	transform: rotate(-2deg);
-	position: absolute;
-	top: 85%;
-	left: -1%;
-	width: 102%;
-	height: 0.05em;
-	z-index: 2;
-	
-	box-shadow: 0 5px 1px #777;
-	
-	-webkit-transition-duration: .5s;
-	-webkit-transition-property: all;
-	-webkit-transition-timing-function: ease;
-	
-	transition-duration: .5s;
-	transition-property: all;
 	transition-timing-function: ease;
+	transition-duration: 0.5s;
+	transition-property: box-shadow;
+
+	box-shadow: 0 1px 0 #666;
 }
-p a:hover::after {
-	box-shadow: 0 5px 1px #ccc;
-	height: 0.10em;
-	-webkit-transform: rotate(1deg);
-	transform: rotate(1deg);
+p a:hover {
+	box-shadow: 0 2px 0 #ccc;
 }
-.light p a:hover::after {
-	box-shadow: 0 5px 1px #222;
+.light p a:hover {
+	box-shadow: 0 2px 0 #222;
 }
 #site_title::after,
 h1 a::after {
