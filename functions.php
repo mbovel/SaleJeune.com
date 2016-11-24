@@ -5,7 +5,8 @@ add_action('ba_header', function() {
 });
 
 add_action('ba_footer', function() {
-    echo '<p id="copyright">Textes, design et développement : copyright © 2015 <a href="http://matthieu.bovel.net" rel="author">Matthieu Bovel</a>, tous droits réservés.</p>';
+    echo '<p id="copyright">Textes, design et développement : copyright © 2015-2016 <a
+href="http://matthieu.bovel.net" rel="author">Matthieu Bovel</a>, tous droits réservés.</p>';
 });
 
 add_action('wp_enqueue_scripts', function() {
