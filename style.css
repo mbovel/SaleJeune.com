@@ -156,6 +156,16 @@ article::after,
 	background-color: #fdc;
 	box-shadow: 0 0 3px #fff;
 }
+.meta {
+	font-size: 0.7em;
+	font-style: italic;
+
+	padding: 0;
+
+	list-style: none;
+
+	text-align: right;
+}
 a {
 	color: inherit;
 
