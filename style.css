@@ -184,10 +184,6 @@ p a:hover {
 .light p a:hover {
 	box-shadow: 0 2px 0 #222;
 }
-#site_title::after,
-h1 a::after {
-	content: none;
-}
 #copyright {
 	color: #fff;
 	font-size: 0.7em;
