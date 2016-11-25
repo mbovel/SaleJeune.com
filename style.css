@@ -169,6 +169,12 @@ article::after,
 	background-color: #fdc;
 	box-shadow: 0 0 3px #fff;
 }
+abbr {
+	font-style: italic;
+}
+abbr[title] {
+	border: none;
+}
 .meta {
 	font-size: 0.7em;
 	font-style: italic;
