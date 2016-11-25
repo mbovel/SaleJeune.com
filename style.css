@@ -290,9 +290,6 @@ p a:hover {
 	article::after {
 		content: none;
 	}
-	p a::after {
-		content: none;
-	}
 	#copyright {
 		padding-top: 6em;
 	}
