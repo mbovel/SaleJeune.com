@@ -182,8 +182,9 @@ abbr[title] {
 	padding: 0;
 
 	list-style: none;
-
-	text-align: right;
+}
+.dark .meta {
+	letter-spacing: 0.02em;
 }
 a {
 	color: inherit;
