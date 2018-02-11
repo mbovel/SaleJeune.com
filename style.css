@@ -175,6 +175,11 @@ abbr {
 abbr[title] {
 	border: none;
 }
+hr {
+	border: none;
+	border-bottom: 1px solid #666;
+	margin: 3em 40%;
+}
 .meta {
 	font-size: 0.7em;
 	font-style: italic;
