@@ -12,8 +12,8 @@ href="http://matthieu.bovel.net" rel="author">Matthieu Bovel</a></nobr>, tous dr
 add_action('wp_enqueue_scripts', function() {
 	wp_enqueue_style('roboto', '//fonts.googleapis.com/css?family=Roboto:300,300italic,500,700&subset=latin,latin-ext', [], '1.1', 'all');
     wp_enqueue_style('salejeune', get_stylesheet_uri(), ['normalize', 'base'], '1.0', 'all');
-    wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . '/third-party/modernizr.js', [], '2.8.3', true);
-});
+	wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . '/third-party/modernizr.js', [], '3.5.0', true);
+} );
 
 add_filter('oq_name_css', function($handles) {
     if($handles === 'normalize,base,salejeune')
