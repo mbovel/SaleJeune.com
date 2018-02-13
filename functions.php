@@ -17,12 +17,10 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/third-party/modernizr.js', [], '3.5.0', true );
 } );
 
-add_filter('oq_name_css', function($handles) {
-    if($handles === 'normalize,base,salejeune')
-        return 'style';
-    
-    return $handles;
-}, null);
+// See https://wordpress.stackexchange.com/a/211705
+add_action( 'wp_footer', function() {
+	wp_deregister_script( 'wp-embed' );
+} );
 
 add_filter( 'post_class', function( $classes ) {
 	if ( get_post_meta( get_the_ID(), 'bg', true ) === 'light' ) {
