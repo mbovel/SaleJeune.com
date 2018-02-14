@@ -1,7 +1,7 @@
 	</main>
 
 	<footer>
-		<p id="copyright">© 2015–<?= date("Y") ?> Textes, design et développement <nobr><a href="http://matthieu.bovel.net" rel="author">Matthieu Bovel</a></nobr>, tous droits réservés.</p>
+		<p>© 2015–<?= date("Y") ?> Textes, design et développement <nobr>Matthieu Bovel</nobr>, tous droits réservés. <a href="https://status.salejeune.com/">Status</a>.</p>
 	</footer>
 </div>
 
