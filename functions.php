@@ -13,7 +13,7 @@ add_editor_style( 'style.css' );
 
 add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,300italic,500,700&subset=latin,latin-ext', [], '1.1', 'all' );
-	wp_enqueue_style( 'salejeune', get_stylesheet_uri(), [], '1.1', 'all' );
+	wp_enqueue_style( 'salejeune', get_stylesheet_uri(), [ 'roboto' ], '1.1', 'all' );
 	wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/third-party/modernizr.js', [], '3.5.0', true );
 } );
 
