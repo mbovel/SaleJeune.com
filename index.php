@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<article <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/Article">
+	<article <?php post_class(); ?> style="--rotate: <?= get_field( 'rotation' ) ?>deg"
+	                                itemscope="itemscope" itemtype="http://schema.org/Article">
 		<time datetime="<?= esc_attr( get_the_date( 'c' ) ); ?>"
 		      itemprop="datePublished"><?php the_date(); ?></time>
 

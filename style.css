@@ -17,27 +17,22 @@ body {
 	font-size: 1.3em;
 	font-weight: 300;
 	line-height: 1.8;
-
 	margin: 0;
-
 	text-align: justify;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
-
 	background-color: #000;
 	background-image: url('bg.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
 	background-size: auto 100%;
-
 	-ms-hyphens: auto;
 }
 
 .mce-content-body {
 	margin: 3em auto;
-
 	background-size: cover;
 }
 
@@ -50,11 +45,8 @@ body {
 	font-size: 4.5em;
 	font-size: 14.5vw;
 	font-weight: 700;
-
 	display: block;
-
 	margin: 0;
-
 	-webkit-transform: rotate(5deg);
 	transform: rotate(5deg);
 	text-align: center;
@@ -107,13 +99,11 @@ small {
 
 h1 {
 	font-size: 3em;
-
 	margin: 1.5em 0 0.6em;
 }
 
 h2 {
 	font-size: 1.1em;
-
 	margin: 2em 0 0;
 }
 
@@ -124,11 +114,8 @@ time {
 article,
 .mce-content-body {
 	color: #000;
-
 	position: relative;
-
 	overflow: visible;
-
 	max-width: 30em;
 	margin: 1em auto;
 	padding: 2em 2em 10em;
@@ -152,22 +139,19 @@ article::after,
 	z-index: -2;
 	top: 0;
 	left: -40%;
-
 	-webkit-box-sizing: border-box;
 	width: 180%;
 	height: 100%;
-
 	content: '';
-
 	opacity: 0.9;
 	border: 1em solid #000;
+	-webkit-transform: rotate(var(--rotate));
+	transform: rotate(var(--rotate));
 }
 
 .dark {
 	color: #ccc;
-
 	letter-spacing: 0.04em;
-
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -177,9 +161,6 @@ article::after,
 }
 
 .dark::after {
-	-webkit-transform: rotate(2deg);
-	transform: rotate(2deg);
-
 	background-color: #250a0a;
 	box-shadow: 0 0 3px #000;
 }
@@ -194,9 +175,6 @@ article::after,
 }
 
 .light::after {
-	-webkit-transform: rotate(-2deg);
-	transform: rotate(-2deg);
-
 	border-color: #fff;
 	background-color: #fdc;
 	box-shadow: 0 0 3px #fff;
@@ -238,10 +216,8 @@ sup {
 .meta {
 	font-size: 0.7em;
 	font-style: italic;
-
 	margin-top: 4em;
 	padding: 0;
-
 	list-style: none;
 }
 
@@ -251,15 +227,11 @@ sup {
 
 a {
 	color: inherit;
-
 	text-decoration: none;
-
 	background-color: transparent;
-
 	transition-timing-function: ease;
 	transition-duration: 0.5s;
 	transition-property: box-shadow;
-
 	box-shadow: 0 1px 0 #999;
 }
 
@@ -275,17 +247,17 @@ a:hover {
 	box-shadow: 0 2px 0 #222;
 }
 
-h1 a:link, .light h1 a:link, header a:link {
+h1 a:link,
+.light h1 a:link,
+header a:link {
 	box-shadow: none;
 }
 
 footer {
 	color: #fff;
 	font-size: 0.7em;
-
 	margin: 2em;
 	padding-top: 5em;
-
 	text-align: center;
 }
 
@@ -308,9 +280,7 @@ footer {
 
 	article::after {
 		left: -40%;
-
 		width: 180%;
-
 		border-width: 0.5em;
 	}
 }
@@ -323,7 +293,6 @@ footer {
 	#site_title {
 		font-size: 3.2em;
 		font-size: 13vw;
-
 		margin-top: 0.5em;
 		margin-bottom: 0.6em;
 	}
@@ -344,7 +313,6 @@ footer {
 @media print {
 	body {
 		font-size: 10pt;
-
 		background: none;
 	}
 
@@ -357,7 +325,6 @@ footer {
 
 	#site_title {
 		font-size: 5em;
-
 		margin-top: 1em;
 		margin-bottom: -1em;
 	}

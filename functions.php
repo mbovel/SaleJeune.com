@@ -32,16 +32,6 @@ add_filter( 'post_class', function( $classes ) {
 	return $classes;
 } );
 
-add_filter( 'body_class', function( $classes ) {
-	if ( get_post_meta( get_the_ID(), 'bg', true ) === 'light' ) {
-		$classes[] = 'light';
-	} else {
-		$classes[] = 'dark';
-	}
-
-	return $classes;
-} );
-
 add_filter( 'tiny_mce_before_init', function( $init_array ) {
 	if ( get_post_meta( get_the_ID(), 'bg', true ) === 'light' ) {
 		$init_array['body_class'] = 'light';
@@ -52,10 +42,10 @@ add_filter( 'tiny_mce_before_init', function( $init_array ) {
 	return $init_array;
 } );
 
-if ( function_exists( "register_field_group" ) ) {
-	register_field_group( [
+if ( function_exists( "acf_add_local_field_group" ) ) {
+	acf_add_local_field_group( [
 		'id'         => 'acf_fond',
-		'title'      => 'Fond',
+		'title'      => 'Apparence',
 		'fields'     => [
 			[
 				'key'           => 'field_54d7e1e62fc98',
@@ -70,6 +60,26 @@ if ( function_exists( "register_field_group" ) ) {
 				'default_value' => 'dark',
 				'allow_null'    => 0,
 				'multiple'      => 0,
+			],
+			[
+				'key'               => 'field_5dbef07a12d9e',
+				'label'             => 'Rotation',
+				'name'              => 'rotation',
+				'type'              => 'range',
+				'instructions'      => '',
+				'required'          => 0,
+				'conditional_logic' => 0,
+				'wrapper'           => [
+					'width' => '',
+					'class' => '',
+					'id'    => '',
+				],
+				'default_value'     => 1,
+				'min'               => - 2,
+				'max'               => 2,
+				'step'              => '0.5',
+				'prepend'           => '',
+				'append'            => '',
 			],
 		],
 		'location'   => [
@@ -86,8 +96,7 @@ if ( function_exists( "register_field_group" ) ) {
 		'options'    => [
 			'position'       => 'side',
 			'layout'         => 'default',
-			'hide_on_screen' => [
-			],
+			'hide_on_screen' => [],
 		],
 		'menu_order' => 0,
 	] );
